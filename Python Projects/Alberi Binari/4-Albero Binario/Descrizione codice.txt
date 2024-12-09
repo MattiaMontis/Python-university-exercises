@@ -1,0 +1,20 @@
+Classe Nodo: La classe Nodo rappresenta un nodo dell'albero, con un valore e una lista di figli (children). Il metodo add_chidlren consente di aggiungere più figli a un nodo, e il metodo __repr__ restituisce una rappresentazione del nodo, utile per il debugging.
+
+Funzione costruisci_albero_esercizio(): Questa funzione costruisce l'albero come descritto nell'esercizio. Ogni nodo viene creato e i suoi figli vengono aggiunti tramite il metodo add_chidlren.
+
+Funzione somma_nodi(tree, somma=0):
+
+Parametro tree: è il nodo corrente dell'albero che stiamo esplorando.
+Parametro somma: è la somma accumulata dei valori positivi dei nodi finora. Si inizializza a 0.
+Se il valore del nodo è positivo, lo aggiungiamo alla somma.
+La funzione poi esplora ricorsivamente tutti i figli del nodo corrente (se presenti), accumulando i valori positivi in tutti i livelli dell'albero.
+Chiamata e Verifica: Nel blocco if __name__ == "__main__", viene costruito l'albero e chiamata la funzione somma_nodi. Infine, viene verificato se il risultato ottenuto corrisponde alla somma corretta (35) e stampato un messaggio di conferma.
+
+Esecuzione
+Quando esegui il programma, la funzione somma i valori positivi nell'albero e restituisce la somma totale che, in questo caso, è 35 (5 + 2 + 11 + 4 + 2 + 7 + 3 + 1).
+
+Considerazioni
+La funzione è progettata per esplorare l'albero in profondità, visitando ogni nodo esattamente una volta, e sommare solo i valori positivi.
+Il risultato della somma viene restituito alla fine della funzione, che continua a scendere attraverso l'albero in modo ricorsivo.
+L'approccio ricorsivo è adatto in questo caso per l'esplorazione di strutture dati come gli alberi, che hanno una natura gerarchica.
+Questo è un esempio di come si possa utilizzare la ricorsione per risolvere problemi legati alla manipolazione di alberi binari o strutture simili.

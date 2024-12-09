@@ -1,0 +1,10 @@
+Il ransomware Burl1 cifra i file di un PC memorizzando la chiave di cifratura in immagini con estensione .png. L'immagine è divisa in tasselli quadrati, e i tasselli possono essere ruotati di 90°, 180° o 270° (o nessuna rotazione). Ogni rotazione è rappresentata da una lettera 'R' (rotazione a destra), 'L' (rotazione a sinistra), 'F' (flip) e 'N' (nessuna rotazione). La chiave di cifratura nascosta nell'immagine è una sequenza di queste lettere.
+
+La funzione jigsaw ha come input
+
+Il nome di un file contenente l'immagine con i tasselli ruotati.
+Il nome di un file contenente l'immagine originale, non ruotata.
+La dimensione dei tasselli quadrati.
+Il nome del file cifrato da decifrare.
+Il nome del file dove salvare il testo decifrato.
+L'obiettivo della funzione è trovare la chiave di cifratura confrontando le due immagini (una con i tasselli ruotati e l'altra originale) e utilizzando la chiave per decifrare il file cifrato.

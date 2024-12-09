@@ -1,0 +1,16 @@
+Il compito consiste nel tradurre spartiti musicali scritti in una notazione numerica Tarahumara, utilizzata da una popolazione ormai estinta, in una notazione comprensibile per i musicisti Umkansaniani, ultimi discendenti dei Tarahumara. Gli spartiti sono contenuti in vari file, organizzati in una struttura di cartelle, e un file indice fornisce i percorsi di ciascun brano musicale.
+
+La traduzione richiede diverse operazioni:
+
+La conversione delle note numeriche (ad esempio, "0" per la nota A, "1" per B, e così via fino a "7" per G) in lettere, utilizzando una notazione più familiare ai musicisti Umkansaniani. Inoltre, le alterazioni delle note, come i diesis (#) e i bemolle (b), devono essere rappresentate correttamente.
+La gestione delle pause, che in Tarahumara sono indicate con degli spazi, e devono essere tradotte in una notazione specifica come "P" seguita dal numero di unità di tempo.
+L'assegnazione delle durate a ciascuna nota e pausa, che nel formato Tarahumara sono ripetute più volte (ad esempio, "0000" per una durata di 4), mentre nel formato Umkansaniano ogni nota è seguita da un numero che indica la sua durata.
+Dopo aver tradotto i brani, i file devono essere salvati in una nuova struttura di cartelle che riproduca quella originale. Inoltre, deve essere generato un nuovo file indice che contenga il titolo di ogni brano e la sua durata. L'indice deve essere ordinato prima per durata in ordine decrescente e, in caso di durate uguali, in ordine alfabetico crescente.
+
+In questo processo, viene utilizzato Python per gestire la lettura e scrittura dei file, il parsing dei dati, la gestione delle cartelle e l’ordinamento dell’indice, offrendo così una soluzione automatizzata e scalabile per la traduzione degli spartiti.
+
+
+
+
+
+

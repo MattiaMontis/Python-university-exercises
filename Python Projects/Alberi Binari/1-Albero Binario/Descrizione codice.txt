@@ -1,0 +1,17 @@
+Il codice che ho scritto riguarda la costruzione di un albero binario completo di altezza 𝑘
+k, in cui i nodi interni sono identificati dalla somma dei due figli e le foglie hanno identificatori che vanno da 1 a 2^𝑘 .
+L'obiettivo è creare una struttura ad albero in cui ogni nodo interno ha esattamente due figli e tutte le foglie si trovano allo stesso livello, rispettando la definizione di "albero binario completo".
+Per risolvere il problema, ho implementato due funzioni principali: es12(k) e crea_albero(k, n).
+La funzione es12(k) è la funzione principale che, ricevuto il parametro 𝑘 (l'altezza dell'albero), chiama la funzione ricorsiva crea_albero(k, n) per costruire l'albero e restituirne la radice.
+La funzione crea_albero(k, n) è una funzione ricorsiva che costruisce l'albero binario completo. Se 𝑘>0, la funzione crea un nodo interno e ricorsivamente costruisce i figli sinistro e destro dell'albero, decrementando 𝑘 per ogni livello. Ogni nodo interno è creato come la somma degli identificatori dei suoi figli. Quando 𝑘=0, la funzione crea una foglia con identificatore 𝑛.
+La funzione ricorsiva lavora in questo modo:
+Per un nodo interno (quando 𝑘>0), si crea un nodo con figli sinistro e destro, che sono anch'essi alberi binari completi con un livello in meno. Gli identificatori dei figli vengono sommati per determinare l'identificatore del nodo interno.
+Quando si arriva a una foglia (quando 𝑘=0), si assegna semplicemente un identificatore al nodo.
+Infine, il risultato della funzione es12(k) è la radice dell'albero binario completo di altezza 𝑘.
+Il codice sfrutta la ricorsione per costruire l'albero dal basso verso l'alto: prima si creano le foglie, e poi, risalendo, si creano i nodi interni sulla base delle somme degli identificatori dei figli. In questo modo, l'albero viene costruito in modo graduale, mantenendo la struttura binaria completa.
+
+
+
+
+
+

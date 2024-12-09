@@ -1,0 +1,21 @@
+Il codice che ho scritto si occupa di risolvere il problema di decifrare un file utilizzando una chiave nascosta all'interno di un'immagine, dove la chiave è determinata da una serie di rotazioni applicate a dei tasselli quadrati. L'immagine è stata cifrata mediante una tecnica in cui i tasselli originali sono stati ruotati di vari gradi (90°, 180°, 270°) o lasciati invariati, e il compito è determinare queste rotazioni per poi usarle per decifrare un file di testo.
+
+L'approccio che ho adottato si sviluppa in vari passi:
+
+Caricamento delle immagini: Le immagini cifrate e originali vengono caricate in memoria, e il codice le processa per analizzare le differenze tra di esse.
+
+Estrazione dei tasselli: L'immagine viene divisa in tasselli quadrati di dimensione predefinita. Ogni tassello viene estratto separatamente sia dall'immagine cifrata che da quella originale.
+
+Determinazione delle rotazioni: Per ogni tassello, il programma esamina se la sua versione cifrata è uguale alla versione originale, ruotata in vari modi (di 90°, 180°, 270° o nessuna rotazione). Ogni tassello ha una rotazione associata che viene memorizzata in una "chiave".
+
+Formazione della chiave: La chiave finale di rotazioni viene costruita riga per riga, in modo da ottenere una lista di rotazioni per ciascun tassello. Questa chiave sarà poi utilizzata per decifrare il file cifrato.
+
+Decifratura del file: Una volta ottenuta la chiave, il file cifrato viene decifrato utilizzando un algoritmo che applica le trasformazioni associate a ciascun carattere del file. Le trasformazioni dipendono dalla rotazione specificata nella chiave e comprendono spostamenti di caratteri o modifiche al loro valore ASCII.
+
+Salvataggio del risultato: Una volta che il file è stato decifrato, il risultato viene scritto su un nuovo file di testo, che è il file "plain" (in chiaro).
+
+Il codice è progettato per essere efficiente, operando su immagini divise in tasselli e confrontando solo i pezzi necessari per determinare la chiave. La parte di decrittazione applica una serie di operazioni sui caratteri del file cifrato in base alla chiave ottenuta, utilizzando operazioni semplici di spostamento e modifica dei caratteri.
+
+L'approccio sfrutta una combinazione di manipolazione di immagini, confronto di tasselli e algoritmi di crittografia leggeri. Il codice è modularizzato per semplificare la gestione delle immagini e delle rotazioni dei tasselli, con funzioni dedicate per ogni operazione chiave: estrazione dei tasselli, rotazione, calcolo della chiave, applicazione della chiave per decifrare il testo.
+
+In sintesi, il programma risolve il problema della decifrazione utilizzando un approccio step-by-step che parte dalla ricostruzione della chiave attraverso il confronto tra immagini e termina con la decifratura del file, garantendo che ogni passaggio venga eseguito in modo chiaro e sistematico.

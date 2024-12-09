@@ -1,0 +1,16 @@
+Il problema richiedeva di calcolare la somma dei valori di tutti i nodi a ciascun livello di un albero binario. La soluzione che ho implementato si basa su una visita in ampiezza (BFS), che è particolarmente adatta per esplorare gli alberi livello per livello.
+
+Ho iniziato verificando che l'albero non fosse vuoto, in tal caso restituisco subito una lista vuota. Successivamente, ho utilizzato una coda per gestire l'ordine dei nodi da esplorare. Inizialmente, ho inserito la radice dell'albero nella coda, e poi ho proceduto ad esplorare i nodi livello per livello. Per ogni livello, ho calcolato la somma dei nodi presenti e ho aggiunto i figli di ogni nodo alla coda per il livello successivo.
+
+Il vantaggio di questa soluzione è che esplora l'albero in modo sistematico, senza dover accedere ripetutamente a livelli non necessari, e calcola la somma dei nodi a ciascun livello in tempo lineare rispetto al numero totale di nodi nell'albero.
+
+Alla fine, quando la coda è vuota, ho restituito la lista contenente la somma dei nodi per ciascun livello, che è esattamente ciò che ci chiedeva il problema.
+
+Il test che ho scritto verifica che la funzione restituisca i risultati attesi per due alberi di esempio. Se il risultato ottenuto corrisponde a quello atteso, il test passa con successo. La soluzione è ottimizzata e ha una complessità di tempo di 
+𝑂(𝑛), dove n è il numero totale di nodi nell'albero, che è il miglior risultato che si può ottenere per un problema di questo tipo.
+
+
+
+
+
+

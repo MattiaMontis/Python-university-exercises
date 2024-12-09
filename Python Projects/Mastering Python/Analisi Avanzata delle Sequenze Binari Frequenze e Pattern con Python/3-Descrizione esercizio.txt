@@ -1,0 +1,21 @@
+Il codice proposto si occupa di analizzare una sequenza binaria contenuta in un file di testo e di determinare le frequenze di tutte le sottosequenze che hanno una lunghezza compresa tra due valori specificati. Successivamente, il programma restituisce le n sottosequenze più frequenti, ordinate per frequenza e, in caso di parità, lessicograficamente.
+
+Struttura del Codice
+Funzione count_binary_sequences: La funzione principale che si occupa di analizzare la sequenza binaria è count_binary_sequences. Essa esplora tutte le possibili sottosequenze della sequenza con lunghezze comprese tra un valore minimo (min_len) e massimo (max_len). Per ogni sottosequenza trovata, la funzione memorizza la sua frequenza all’interno di un dizionario, dove la chiave è la sottosequenza e il valore è la sua frequenza.
+
+Funzione ex1: La funzione ex1 gestisce il flusso principale del programma. Apre il file contenente la sequenza binaria, rimuove le eventuali interruzioni di riga e poi passa il risultato alla funzione count_binary_sequences per ottenere il dizionario delle sottosequenze e delle loro frequenze.
+
+Successivamente, costruisce un dizionario che inverte i valori con le frequenze come chiavi e le sottosequenze come liste di valori. Le liste di sottosequenze per ogni frequenza vengono ordinate lessicograficamente. Dopo aver ordinato il dizionario in base alle frequenze, vengono selezionati solo i primi n elementi (i più frequenti).
+
+Elaborazione dei Risultati: Una volta ottenuto l'elenco delle sottosequenze ordinate, il codice seleziona e restituisce solo le prime n frequenze più alte, in modo da ottenere il risultato richiesto dall'esercizio. Ogni frequenza è accompagnata dalla lista di sottosequenze che la presentano, e la lista delle sottosequenze per ogni frequenza è anch'essa ordinata in ordine lessicografico.
+
+Approccio Utilizzato
+L'approccio è fondamentalmente un'analisi combinatoria delle sottosequenze possibili all’interno della sequenza binaria. L'algoritmo itera su tutte le possibili lunghezze di sottosequenze, esaminando ogni possibile inizio e calcolando la frequenza di ciascuna. Successivamente, le sottosequenze vengono raggruppate per frequenza e ordinate in modo che le sottosequenze più frequenti vengano restituite prima.
+
+Inoltre, l'uso di un dizionario per contare le frequenze è molto efficiente per tracciare rapidamente il numero di occorrenze di ciascuna sottosequenza, mentre l'ordinamento finale delle sottosequenze e delle frequenze garantisce che il risultato sia in formato richiesto, ordinato per frequenza e lessicograficamente.
+
+Efficienza
+Il codice è progettato per gestire sequenze binarie di dimensioni ragionevoli, ma la complessità dell'algoritmo aumenta in funzione del numero di sottosequenze da analizzare. La fase di ricerca delle sottosequenze ha una complessità quadratica rispetto alla lunghezza della sequenza, ma ciò è mitigato dall’utilizzo del dizionario che rende l’operazione di incremento della frequenza più veloce. Tuttavia, l'ordinamento finale delle sottosequenze può impattare sulle prestazioni per sequenze molto lunghe o quando si richiedono molte sottosequenze da ordinare.
+
+Conclusioni
+Il codice è una soluzione efficace per l'analisi delle frequenze delle sottosequenze di una sequenza binaria. La sua struttura chiara e modulare facilita la lettura e la comprensione, e l’approccio utilizzato è adatto per risolvere il problema posto nel minor tempo possibile per sequenze di lunghezza media.

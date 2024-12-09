@@ -1,0 +1,9 @@
+Il codice implementa una soluzione per il problema della decifrazione di un messaggio cifrato secondo un sistema simile alla "Cifra del Faraone", ma con una variante che prevede l'uso di "quasi-anagrammi". L'approccio adottato sfrutta una combinazione di ricerca delle sottosequenze nel testo cifrato, sostituzione di queste sottosequenze con altre definite nel dizionario del cifrario e una ricerca ricorsiva per applicare le trasformazioni finché non sono più possibili.
+
+Il flusso principale si svolge in due fasi. La prima consiste nel trovare tutte le sottosequenze nel testo che sono "quasi-anagrammi" di una parola chiave, utilizzando la funzione is_quasi_anagram. La seconda fase applica queste trasformazioni ripetutamente tramite una funzione ricorsiva recursive_step, che esplora tutte le possibili modifiche del testo cifrato.
+
+Al termine del processo, il risultato finale è l'insieme delle sequenze più corte ottenute, cioè quelle che non possono essere più trasformate.
+
+Il codice è strutturato in modo da essere facilmente estendibile, e la ricorsione gioca un ruolo chiave nell'esplorare tutte le possibili combinazioni di trasformazioni. L'approccio ricorsivo è essenziale per applicare iterativamente il cifrario fino al raggiungimento delle sequenze finali. La funzione pharaohs_revenge si occupa di avviare il processo ricorsivo e di filtrare i risultati per ottenere solo le sequenze più corte, che sono quelle che ci interessano secondo il problema.
+
+Questo approccio permette di risolvere il problema in modo efficiente e di ottenere tutte le possibili sequenze finali valide, considerando le possibili combinazioni delle trasformazioni definite nel cifrario.

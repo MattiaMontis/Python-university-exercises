@@ -1,0 +1,11 @@
+Il problema riguarda la decifrazione di un messaggio misterioso inviato da Pico de Paperis, utilizzando una variante della famosa "Cifra del Faraone". In questa versione, anziché utilizzare anagrammi completi, il testo criptato contiene ciò che vengono definiti "quasi-anagrammi". Un "quasi-anagramma" è simile a un anagramma, ma con un carattere in più. L'obiettivo è applicare una serie di trasformazioni definite in un dizionario che associa una sequenza di caratteri a una nuova sequenza, dove la sequenza da cercare nel testo è un "quasi-anagramma" della chiave, ossia la chiave con un carattere aggiuntivo.
+
+Il processo di decifrazione consiste nell'identificare queste sequenze nel testo e sostituirle con la sequenza corrispondente, ripetendo questa operazione finché non ci sono più "quasi-anagrammi" da trasformare. Il risultato finale deve essere l'insieme di tutte le sequenze più brevi ottenibili, dopo aver applicato tutte le trasformazioni possibili.
+
+Nel codice, vengono implementate diverse funzioni per verificare se una sequenza è un "quasi-anagramma", per individuare tutte le occorrenze di questi anagrammi nel testo e per applicare le trasformazioni in modo ricorsivo. La funzione ricorsiva esplora tutte le possibili trasformazioni e raccoglie le sequenze finali, dopodiché seleziona le più corte tra di esse per restituirle come risultato. Questo approccio consente di decifrare il messaggio misterioso, ottenendo tutte le possibili versioni del testo decifrato.
+
+
+
+
+
+

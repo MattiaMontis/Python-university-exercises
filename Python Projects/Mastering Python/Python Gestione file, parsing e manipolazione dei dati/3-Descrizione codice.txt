@@ -1,0 +1,19 @@
+Il codice ha l’obiettivo di automatizzare la traduzione di spartiti musicali da una notazione numerica Tarahumara a una notazione più familiare agli Umkansaniani. I brani musicali sono contenuti in una struttura di cartelle e file, e vengono elencati in un file di indice. Il processo di traduzione include vari passaggi:
+
+Traduzione delle note: Le note musicali nella notazione Tarahumara sono rappresentate da numeri (0-7 per le note naturali, "-" per i bemolle e "+" per i diesis). Questi vengono tradotti nella notazione letterale Umkansaniana, dove ogni numero corrisponde a una lettera (A-H) e le alterazioni sono indicate con "b" o "#". Le pause, rappresentate da spazi, vengono tradotte nella lettera "P".
+
+Calcolo della durata: La durata di ogni nota e pausa è definita dal numero di ripetizioni di ciascun carattere. La funzione insert_durations gestisce la durata, che viene successivamente calcolata dalla funzione get_song_duration.
+
+Creazione delle directory e salvataggio dei file: Il codice crea le directory necessarie per mantenere la stessa struttura di cartelle della sorgente. I brani tradotti vengono salvati nei file con il nome corrispondente e con estensione .txt.
+
+Gestione dell'indice: L'indice finale, che contiene il nome e la durata di ciascun brano, viene ordinato prima per durata decrescente e, in caso di parità, per ordine alfabetico del titolo. Questo indice viene poi salvato nel percorso di destinazione.
+
+Funzionalità generali: Il codice sfrutta il modulo os per creare le cartelle e gestire i percorsi. È ben organizzato per gestire l'intero flusso di traduzione, dalla lettura dei file alla scrittura dei risultati.
+
+In sintesi, l'approccio utilizza una serie di funzioni modulari che separano le diverse fasi del processo (traduzione, calcolo durata, salvataggio) e fanno sì che il codice rimanga facilmente estendibile e comprensibile.
+
+
+
+
+
+
